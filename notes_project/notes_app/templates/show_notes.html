@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>All Notes</title>
+    <style>
+        table { width: 80%; margin: auto; border-collapse: collapse; }
+        th, td { border: 1px solid black; padding: 10px; text-align: center; }
+        th { background: #365899; color: white; }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">All Notes</h1>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Title</th>
+            <th>Notes</th>
+        </tr>
+        {% for note in notes %}
+        <tr>
+            <td>{{ note.date }}</td>
+            <td>{{ note.title }}</td>
+            <td>{{ note.notes }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>
